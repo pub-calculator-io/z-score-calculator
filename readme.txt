@@ -1,6 +1,6 @@
 === Z-Score Calculator by Calculator.iO ===
 Contributors: calculatorio
-Tags: 
+Tags: z-score calculator, standard score, normal distribution, population mean, standard deviation, statistical analysis, z-test, prediction intervals, process control, z-table
 Requires at least: 5.0
 Tested up to: 6.4.0
 Stable tag: 1.0.0
