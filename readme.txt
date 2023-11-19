@@ -1,4 +1,4 @@
-=== Z-Score Calculator ===
+=== Z-Score Calculator by www.calculator.io ===
 Contributors: calculatorio
 Tags: z-score calculator, standard score, normal distribution, population mean, standard deviation, statistical analysis, z-test, prediction intervals, process control, z-table
 Requires at least: 5.0

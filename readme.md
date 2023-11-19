@@ -7,7 +7,7 @@ The Z-Score Calculator helps to get the z-score of a normal distribution, conver
 
 ## Installation
 
-1. [Download](https://github.com/pub-calculator-io/age-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
+1. [Download](https://github.com/pub-calculator-io/z-score-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
 2. Upload the /z-score-calculator-master/ folder to the /wp-content/plugins/ directory.
 3. Activate the [Z-Score Calculator](https://www.calculator.io/z-score-calculator/ "Z-Score Calculator Homepage") plugin through the "Plugins" menu in WordPress.
 
