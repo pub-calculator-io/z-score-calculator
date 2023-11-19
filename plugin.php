@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Z-Score Calculator by www.calculator.io
+Plugin Name: CI Z score calculator
 Plugin URI: https://www.calculator.io/z-score-calculator/
 Description: The Z-Score Calculator helps to get the z-score of a normal distribution, convert between z-score and probability, and get the probability between 2 z-scores.
 Version: 1.0.0
