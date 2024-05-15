@@ -28,7 +28,7 @@
             <div class="calculator-setting" id="calculator_form">
                 <div class="calculator-content col">
                 	<div class="input-wrapper row">
-                		<label class="input col ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator">
                 			
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -47,7 +47,7 @@
                 			</div>
                 		</label>	</div>
                 	<div class="input-wrapper row switcher related-to-switcher-0">
-                		<label class="input col   ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			<p class="input__title">Raw Score (x)</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="raw_score" value="5"  />
@@ -56,7 +56,7 @@
                 		
                 		</label>	</div>
                 	<div class="input-wrapper row switcher related-to-switcher-0">
-                		<label class="input col   ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			<p class="input__title">Population Mean (μ)</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="population_mean" value="3"  />
@@ -65,7 +65,7 @@
                 		
                 		</label>	</div>
                 	<div class="input-wrapper row switcher related-to-switcher-0">
-                		<label class="input col   ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			<p class="input__title">Standard Deviation (σ)</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="standart_deviation" value="2"  />
@@ -74,7 +74,7 @@
                 		
                 		</label>	</div>
                 	<div class="input-wrapper row related-item-hidden switcher related-to-switcher-1">
-                		<label class="input col ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator">
                 			<p class="input__title">Given</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -100,7 +100,7 @@
                 					</select>
                 				</div>
                 			</div>
-                		</label>		<label class="input col   ">
+                		</label>		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="probability_or_z_score" value="2"  />
@@ -109,14 +109,14 @@
                 		
                 		</label>	</div>
                 	<div class="input-wrapper row related-item-hidden switcher related-to-switcher-2">
-                		<label class="input col   ">
+                		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			<p class="input__title">Left Bound (z1)</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="left_bound" value="-1"  />
                 			</div>
                 		
                 		
-                		</label>		<label class="input col   ">
+                		</label>		<label class="input col standard-deviation-calculator,standard-deviation,variance-calculator,mean-calculator,percentile-calculator  ">
                 			<p class="input__title">Right Bound (z2)</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="right_bound" value="0"  />
@@ -130,13 +130,16 @@
                 
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculate(this)">Calculate</button>
+                	<button class="button button--primary ml-auto" onclick="calculate(this); animateElements();" data-action="calculate" id="action-button">Calculate</button>
                 </div>
                 
                 
+                	<script type="text/javascript" src="./assets/js/lib/math.min.js" async></script>
                 
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                
+                
+                	<script type="text/javascript" src="./assets/js/calculator.js" defer></script>
             </div>
         </div>
     </div>
@@ -151,8 +154,7 @@
         </svg>
         		<p class="calculator-error__title">There was an error with your calculation.</p>
         	</div>
-        	<div class="col" id="error-list">
-        	</div>
+        	<div class="col" id="error-list"></div>
         </div>        <span id="calculator_result"><div class="calculator-result col tab tab--active" data-tab="0">
 	<div class="result-table__wrapper"> 
 		<table class="result-table result-table--z-score">
@@ -164,12 +166,12 @@
 			<tbody>
 				<tr>
 					<th class="semibold">Z-score</th>
-					<td class="semibold" id="result_z_score">1</td>
+					<td class="semibold animate" id="result_z_score">1</td>
 					<td class="semibold"></td>
 				</tr>
 				<tr>
 					<th>Probability of x&lt;<span id="result_x">5</span></th>
-					<td id="result_lt_x">0.84134</td>
+					<td id="result_lt_x" class="animate">0.84134</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M31 3.5L35 12V40H0L11 37L16.5 31L29 3.5H31Z" fill="#C4B5FD" />
@@ -179,7 +181,7 @@
 				</tr>
 				<tr>
 					<th>Probability of x&gt;<span id="result_x_2">5</span></th>
-					<td id="result_gt_x">0.15866</td>
+					<td id="result_gt_x" class="animate">0.15866</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M39.5 21.5C39.1 21.1 36.3333 15 35 12V40H60L48 36.5L43 30.5C42 27.6667 39.9 21.9 39.5 21.5Z" fill="#C4B5FD" />
@@ -189,7 +191,7 @@
 				</tr>
 				<tr>
 					<th>Probability of <span id="result_lb">3</span>&lt;x&lt;<span id="result_rb">5</span></th>
-					<td id="result_p">0.34134</td>
+					<td id="result_p" class="animate">0.34134</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -214,12 +216,12 @@
 			<tbody>
 				<tr>
 					<th class="semibold">Z-score</th>
-					<td class="semibold" id="result_z_score_2">2</td>
+					<td class="semibold animate" id="result_z_score_2">2</td>
 					<td class="semibold"></td>
 				</tr>
 				<tr>
 					<th>P(x&lt;Z)</th>
-					<td id="result_x_lt_z">0.97725</td>
+					<td id="result_x_lt_z" class="animate">0.97725</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M31 3.5L35 12V40H0L11 37L16.5 31L29 3.5H31Z" fill="#C4B5FD" />
@@ -229,7 +231,7 @@
 				</tr>
 				<tr>
 					<th>P(x&gt;Z)</th>
-					<td id="result_x_gt_z">0.02275</td>
+					<td id="result_x_gt_z" class="animate">0.02275</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M39.5 21.5C39.1 21.1 36.3333 15 35 12V40H60L48 36.5L43 30.5C42 27.6667 39.9 21.9 39.5 21.5Z" fill="#C4B5FD" />
@@ -239,7 +241,7 @@
 				</tr>
 				<tr>
 					<th>P(0&lt;x&lt;Z)</th>
-					<td id="result_0_lt_x_lt_z">0.47725</td>
+					<td id="result_0_lt_x_lt_z" class="animate">0.47725</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -250,7 +252,7 @@
 				</tr>
 				<tr>
 					<th>P(-Z&lt;x&lt;Z)</th>
-					<td id="result_-z_lt_x_lt_z">0.9545</td>
+					<td id="result_-z_lt_x_lt_z" class="animate">0.9545</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -261,7 +263,7 @@
 				</tr>
 				<tr>
 					<th>P(x&lt;-Z or x&gt;Z)</th>
-					<td id="result_x_lt_-z_or_x_gt_z">0.0455</td>
+					<td id="result_x_lt_-z_or_x_gt_z" class="animate">0.0455</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -287,7 +289,7 @@
 			<tbody>
 				<tr>
 					<th class="semibold">P(<span id="result_lb_3">-1</span>&lt;x&lt;<span id="result_rb_3">0</span>)</th>
-					<td class="semibold" id="result_p_inner">0.34134</td>
+					<td class="semibold animate" id="result_p_inner">0.34134</td>
 					<td class="semibold short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -298,7 +300,7 @@
 				</tr>
 				<tr>
 					<th>P(x&lt;<span id="result_lb_3">-1</span> or x&gt;<span id="result_rb_3">0</span>)</th>
-					<td id="result_p_outer">0.65866</td>
+					<td id="result_p_outer" class="animate">0.65866</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -310,7 +312,7 @@
 				</tr>
 				<tr>
 					<th>P(x&lt;<span id="result_lb_3">-1</span>)</th>
-					<td id="result_lt_lb">0.15866</td>
+					<td id="result_lt_lb" class="animate">0.15866</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs></defs>
@@ -321,7 +323,7 @@
 				</tr>
 				<tr>
 					<th>P(x&gt;<span id="result_rb_3">0</span>)</th>
-					<td id="result_gt_rb">0.5</td>
+					<td id="result_gt_rb" class="animate">0.5</td>
 					<td class="short">
 						<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M39.5 21.5C39.1 21.1 36.3333 15 35 12V40H60L48 36.5L43 30.5C42 27.6667 39.9 21.9 39.5 21.5Z" fill="#C4B5FD" />

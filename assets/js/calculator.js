@@ -85,7 +85,7 @@ function calculate(){
       const type = input.get('score_or_pobability').raw();
       const number = input.get('probability_or_z_score')[type == 'Z-score'?'number':'probability']().val();
       if(type == 'P(0<x<Z)' && number > 0.5){
-        input.error('probability_or_z_score','Please provide a P(0&lt;x&lt;Z) value between 0 and 0.5.');
+        input.error('probability_or_z_score','Provide a P(0&lt;x&lt;Z) value between 0 and 0.5.');
       }
       if(!input.valid()) return;
 
@@ -159,7 +159,7 @@ function calculate(){
       const l = input.get('left_bound').number().val();
       const r = input.get('right_bound').number().val();
       if(l > r) {
-        input.error('left_bound','Please specify the left bound value less than or equal to the right bound value');
+        input.error('left_bound','Specify the left bound value less than or equal to the right bound value.');
       }
       if(!input.valid()) return;
 

@@ -24,7 +24,6 @@ Add the following code to your template where you would like the Z-Score Calcula
 == Screenshots ==
 
 1. The Z-Score Calculator Input Form.
-2. The Z-Score Calculator Calculation Results.
 
 == Installation ==
 

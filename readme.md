@@ -3,7 +3,6 @@
 The Z-Score Calculator helps to get the z-score of a normal distribution, convert between z-score and probability, and get the probability between 2 z-scores.
 
 ![Z-Score Calculator Input Form](/assets/images/screenshot-1.png "Z-Score Calculator Input Form")
-![Z-Score Calculator Calculation Results](/assets/images/screenshot-2.png "Z-Score Calculator Calculation Results")
 
 ## Installation
 
